@@ -11,8 +11,8 @@ pipeline {
                 echo "Building Stage"
                 cd app
                 python -m venv venv
-                pip install --no-cache-dir --upgrade pip
                 source venv/bin/activate  
+                pip install --no-cache-dir --upgrade pip
                 pip install -r requirements.txt
                 '''
             }
