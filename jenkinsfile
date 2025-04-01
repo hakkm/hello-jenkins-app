@@ -1,5 +1,5 @@
 pipeline {
-    agent any
+    agent { docker { image 'python:3.13-alpine' } }
     triggers {
         pollSCM '*/5 * * * *'
     }
