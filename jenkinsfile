@@ -10,7 +10,9 @@ pipeline {
                 sh '''
                 echo "Building Stage"
                 cd app
-                pip install --user -r requirements.txt
+                python -m venv venv
+                source venv/bin/activate  
+                pip install -r requirements.txt
                 '''
             }
         }
