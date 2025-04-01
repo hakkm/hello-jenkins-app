@@ -1,7 +1,7 @@
 pipeline {
-    agent { docker { image 'python:3.13-alpine' } }
+    agent { docker { image 'python:3.13.2-alpine3.21' } }
     triggers {
-        pollSCM '*/5 * * * *'
+        pollSCM '* * * * *'
     }
     stages {
         stage('Build') {
